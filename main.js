@@ -7,9 +7,10 @@ io.on("connect", function(){
     if(typeof tuple === "undefined" || tuple === null) return;
     if(tuple.length !== 3) return;
     console.log(tuple);
-    var light = tuple[2];
-    var color = $.Color(light, light, light);
-    $("body").css("background-color", color);
+    var light = tuple[2]; // 0~1023
+    var bg_color = $.Color(light, light, light);
+    var font_color = light > 128 ? "#000000" : "#FFFFFF";
+    $("body").css("background-color", bg_color).css("color", font_color);
     $("#light").text("tuple = ["+tuple+"]");
   });
 });
