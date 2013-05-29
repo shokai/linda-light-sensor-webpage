@@ -1,3 +1,6 @@
+var shebang;
+if(shebang = location.href.match(/#([^#]+)$/)) space = shebang[1];
+
 var io = new RocketIO().connect(linda_url);
 var linda = new Linda(io);
 var ts = new linda.TupleSpace(space);

@@ -23,3 +23,8 @@ Run
 ---
 
     % open index.html
+
+set TupleSpace name with shebang
+
+- http://example.com/light/index.html
+- http://example.com/light/index.html#my_tuple_space_name
